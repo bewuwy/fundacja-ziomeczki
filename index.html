@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>fundacja ziomeczki</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+      function checkSroda() {
+        var d = new Date();
+        var n = d.getDay();
+
+        if (n == 2) {
+          document.getElementById("sroda").style.display = "block";
+        }
+        else {
+          document.getElementById("niesroda").style.display = "block";
+        }
+      }
+    </script>
+
+    <style>
+      body { font-family: 'Roboto', sans-serif; text-align: center; }
+      img { width: auto; height: 40vh; margin: 6vh; -webkit-animation: rotation 5s infinite linear; }
+      h1 { font-size: 3vh; }
+      footer { width: 100%; position: fixed; bottom: 1vh; }
+
+      @-webkit-keyframes rotation { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(359deg); } }
+    </style>
+  </head>
+  <body onload="checkSroda()">
+    <br>
+    <div id="sroda" style="display:none">
+      <h1>jest środa moje ziomeczki :DDD</h1>
+      <img src="https://i.kym-cdn.com/photos/images/newsfeed/001/091/264/665.jpg">
+    </div>
+    <div id="niesroda" style="display: none">
+      <h1>nie ma środy moje ziomeczki D:</h1>
+    </div>
+
+    <footer>
+        <p style="text-align: center;">© 2021 bewu</p>
+    </footer>
+  </body>
+</html>
